@@ -2,6 +2,8 @@
 
 A modern, lightweight frontend application that displays curated developer resources in a clean and interactive UI.
 
+[live demo](https://axoo01.github.io/Dev-Dashboard/)
+
 ## Purpose
 
 This project focuses on setting up a professional frontend workflow using modern tools like Vite, React, and Tailwind CSS while implementing core UI features such as filtering and dynamic rendering.
