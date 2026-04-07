@@ -2,7 +2,7 @@
 
 A modern, lightweight frontend application that displays curated developer resources in a clean and interactive UI.
 
-[live demo](https://axoo01.github.io/Dev-Dashboard/)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Site-1B263B?style=for-the-badge)](https://axoo01.github.io/Dev-Dashboard/)
 
 ## Purpose
 
