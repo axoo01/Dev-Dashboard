@@ -1,53 +1,56 @@
-import { useState } from "react";
-import ResourceCard from "./components/ResourceCard";
+import { useState } from 'react';
+import ResourceCard from './components/ResourceCard';
 
 function App() {
-  const [search, setSearch] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const categories = ["All", "Documentation", "Learning", "Build Tool", "Styling", "Tool"];
+  const [search, setSearch] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const categories = [
+    'All',
+    'Documentation',
+    'Learning',
+    'Build Tool',
+    'Styling',
+    'Tool',
+  ];
 
   const resources = [
     {
-      name: "React Docs",
-      category: "Documentation",
-      link: "https://react.dev",
+      name: 'React Docs',
+      category: 'Documentation',
+      link: 'https://react.dev',
     },
     {
-      name: "MDN Web Docs",
-      category: "Learning",
-      link: "https://developer.mozilla.org",
+      name: 'MDN Web Docs',
+      category: 'Learning',
+      link: 'https://developer.mozilla.org',
     },
     {
-      name: "Vite",
-      category: "Build Tool",
-      link: "https://vite.dev",
+      name: 'Vite',
+      category: 'Build Tool',
+      link: 'https://vite.dev',
     },
     {
-      name: "Tailwind CSS",
-      category: "Styling",
-      link: "https://tailwindcss.com",
+      name: 'Tailwind CSS',
+      category: 'Styling',
+      link: 'https://tailwindcss.com',
     },
     {
-      name: "FreeCodeCamp",
-      category: "Learning",
-      link: "https://www.freecodecamp.org",
+      name: 'FreeCodeCamp',
+      category: 'Learning',
+      link: 'https://www.freecodecamp.org',
     },
     {
-      name: "GitHub",
-      category: "Tool",
-      link: "https://github.com",
-    }
+      name: 'GitHub',
+      category: 'Tool',
+      link: 'https://github.com',
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-800 via-black to-gray-600 text-white flex flex-col items-center p-6">
-      
       <div className="w-full max-w-7xl">
-        
         <div className="flex justify-between items-center mb-18">
-          <h1 className="text-3xl font-bold">
-            Dev Dashboard 🚀
-          </h1>
+          <h1 className="text-3xl font-bold">Dev Dashboard</h1>
 
           <input
             type="text"
@@ -65,15 +68,15 @@ function App() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-3 py-1 rounded-lg text-sm border transition ${
                 selectedCategory === cat
-                  ? "bg-purple-400/50 text-white border-purple-400 transition duration-500"
-                  : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10"
+                  ? 'bg-purple-400/50 text-white border-purple-400 transition duration-500'
+                  : 'bg-white/5 text-gray-300 border-white/10 hover:bg-white/10'
               }`}
             >
               {cat}
             </button>
           ))}
         </div>
-        
+
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {resources
             .filter((res) => {
@@ -82,8 +85,7 @@ function App() {
                 .includes(search.toLowerCase());
 
               const matchesCategory =
-                selectedCategory === "All" ||
-                res.category === selectedCategory;
+                selectedCategory === 'All' || res.category === selectedCategory;
 
               return matchesSearch && matchesCategory;
             })
@@ -96,7 +98,6 @@ function App() {
               />
             ))}
         </div>
-
       </div>
     </div>
   );

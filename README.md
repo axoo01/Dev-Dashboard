@@ -10,10 +10,10 @@ This project focuses on setting up a professional frontend workflow using modern
 
 ## Tech Stack
 
-* React (Component-based UI)
-* Vite (Fast development & build tool)
-* Tailwind CSS (Utility-first styling)
-* JavaScript (ES Modules)
+- React (Component-based UI)
+- Vite (Fast development & build tool)
+- Tailwind CSS (Utility-first styling)
+- JavaScript (ES Modules)
 
 ---
 
